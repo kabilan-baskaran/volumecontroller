@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="kiosk-plugin-volumecontroller" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>volumecontroller</name>
+    <js-module name="volumecontroller" src="www/volumecontroller.js">
+        <clobbers target="window.volumecontroller" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="volumecontroller">
+                <param name="android-package" value="kiosk.plugin.volumecontroller" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        </config-file>
+        <source-file src="src/android/volumecontroller.java" target-dir="src/kiosk/plugin" />
+    </platform>
+</plugin>
