@@ -8,7 +8,7 @@
         "android"
       ]
     },
-    "repository": "github:apache/cordova-plugin-media",
+    "repository": "git@github.com:kabilan-baskaran/volumecontroller.git",
     "keywords": [
       "kiosk",
       "volumecontroller"
